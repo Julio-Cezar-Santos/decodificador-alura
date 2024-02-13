@@ -14,24 +14,33 @@
             <section class="left-side">
                 <img src="./assets/logo.png" alt="Logo da Alura" class="logo">
                 <div class="left-side-content">
-                    <textarea class="text-area" placeholder="Digite seu texto"></textarea>
-
-                    <div class="left-side-btn-group">
-                        <p><img src="./assets/alerta.png">Apenas letras minúsculas e sem acento.</p>
-                        <button class="left-side-btn">Botão 1</button>
-                        <button class="left-side-btn">Botão 2</button>
+                    <textarea class="text-area" name="text-area" id="text-area" cols="30" rows="10"
+                        placeholder="Digite seu texto"></textarea>
+                    <div>
+                        <p class="alerta"><img src="./assets/alerta.png">Apenas letras minúsculas e sem acento.</p>
+                        <div class="left-side-btn-group">
+                            <button onclick='criptografar()' class="btn criptografar">Criptografar</button>
+                            <button onclick='descriptografar()' class="btn descriptografar">Descriptografar</button>
+                        </div>
                     </div>
                 </div>
             </section>
-            <section class="right-side">
+            <section class=" right-side">
                 <div class="rectangle">
-                    <img src="./assets/imagem.png" alt="Imagem" class="rectangle-image">
-                    <h2 class="title">Título</h2>
-                    <p class="description">Descrição sobre a imagem.</p>
+                    <div class="rectangle-content">
+                        <img src="./assets/imagem.png" alt="Imagem" class="rectangle-image">
+                        <h2 class="rectangle-title">Nenhuma mensagem encontrada</h2>
+                        <p class="rectangle-text">Digite um texto que você deseja criptografar ou
+                            descriptografar.
+                        </p>
+                    </div>
                 </div>
+                <button type="button" onclick="copiar()" class="btn copiar">Copiar</button>
+                <p class="alerta-copiado">Texto copiado para área de transferência.</p>
             </section>
         </main>
     </div>
+    <script src="./app.js"></script>
 </body>
 
 </html>
